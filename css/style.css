@@ -1,0 +1,77 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: 350ms;
+}
+body{
+	width: 100%;
+	height: 100vh;
+	background-blend-mode: multiply;
+	background: rgba(234,198,208,1);
+	background-image: url('../img/cool-background (1).svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+section{
+	min-height: 100vh;
+}
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;	
+}
+div.container{
+	height: 100vh;
+}
+:focus{
+	outline: none;
+	border: 1px solid rgba(87,134,234,1);
+	opacity: 1;
+	transform: scale(4.1,4.1);
+	z-index: 5000;
+}
+select, input, textarea{
+	display: inline-block;
+	border: none;
+	box-shadow: 0 0 5px rgba(0,0,0,.6);
+	opacity: .91;
+	background: rgba(128,128,128,.5);
+	padding: 5px;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+option{
+	opacity: .1;
+	filter: blur(5px) !important;
+	padding: 5px;
+	font-family: candara, "Helvetica Neue", Helvetica, sans-serif;
+}
+.fa-link{
+	text-decoration: none;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16px;
+}
+div.fa-search{
+	width: 20px;
+	height: 20px;
+	background-image: url('../img/search-location.svg') !important;
+	position: absolute;
+	left: 150px;
+	top:13px;
+	border:1px solid red;
+	z-index: 50000;
+}
+.in-on{
+	display: flex;
+	position: relative;
+}
+label[for="you"]{/*
+	position: absolute;
+	top: 13px;
+	left: 5px;
+	color: rgba(0,0,0,.5);
+	font-family: corbel;
+}*/
