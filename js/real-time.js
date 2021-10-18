@@ -38,7 +38,7 @@ in1.onblur = function() {
 	//  }
 }
 search.onclick = function() {
-		url = `http://worldtimeapi.org/api/timezone/${select.value}${in1.value}`;
+		url = `http://worldtimeapi.org/api/timezone/${select.value}/${in1.value}`;
 		fetch(url).then(request=>request.json()).then(response=>{
 			console.log(response);
 		})
