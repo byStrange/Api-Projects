@@ -37,10 +37,29 @@ in1.onblur = function() {
 	//  	search.style = `top : 32px !important`
 	//  }
 }
-search.onclick = function() {
+search.onclick = setter;
+window.onkeyup = function (e){
+	if(e.key === "Enter") setter()
+} 
+function setter() {
 		url = `http://worldtimeapi.org/api/timezone/${select.value}/${in1.value}`;
 		fetch(url).then(request=>request.json()).then(response=>{
 			console.log(response);
+			// time = response.datetime
+			if(response.hasOwnProperty('datetime'))
+				{$ = response.datetime;
+				time = $.split('T');
+				time_2 = time[1].split('.')
+				result  = time_2[0]
+				document.querySelector('#res-target').innerHTML = result;
+				document.querySelector('#res-target').style.color = "rgba(0,0,0,.6)";
+				document.querySelector('#res-target').style.fontSize = "5em";
+				document.querySelector('#res-target').title = response.timezone;
+				}
+				else {
+				document.querySelector('#res-target').innerHTML = 'Enter Your City Name Correctly';
+				document.querySelector('#res-target').style.color = "red";
+				document.querySelector('#res-target').style.fontSize = "2em";
+				}
 		})
-
 }
