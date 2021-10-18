@@ -61,7 +61,6 @@ div.fa-search{
 	position: absolute;
 	left: 150px;
 	top:13px;
-	border:1px solid red;
 	z-index: 50000;
 }
 .in-on{
